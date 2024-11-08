@@ -55,8 +55,6 @@ console.log('____________________');
 */
 console.log('ESERCIZIO 4');
 
-// const modPets = [];
-
 function fromStartToEnd(arr) {
   const myArray = [];
   for (let i = 0; i < arr.length - 1; i++) {
@@ -101,10 +99,11 @@ const cars = [
 
 console.log('ESERCIZIO 5');
 
+// Ipotizzo una licensePlate formata da un numero a 6 cifre
 const licensePlateNumbers = 6;
 
 function createLicensePlate(n) {
-  let myLicensePlate = Math.floor(Math.random() * 10 ** n);
+  let myLicensePlate = Math.floor(Math.random() * 1.1 * 10 ** n);
   return myLicensePlate;
 }
 
@@ -140,6 +139,16 @@ function addCarTo(arr, car) {
 }
 
 addCarTo(cars, myCar);
+console.log(cars);
+
+function removeLastTrim(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    arr[i].trims.pop();
+  }
+}
+
+console.log('Removed last element of trims:');
+removeLastTrim(cars);
 console.log(cars);
 
 console.log('____________________');

@@ -72,6 +72,11 @@ section:not(:first-of-type) {
 #sectGame h2,
 #sectGame h4 {
   display: inline;
+  font-weight: 400;
+}
+
+#sectGifts h4,
+#sectGame h4 {
   font-weight: bold;
 }
 
@@ -133,7 +138,7 @@ section:not(:first-of-type) {
 
 #sectGifts .cardsContainer .card {
   width: 250px;
-  aspect-ratio: 4/5;
+  aspect-ratio: 5/6;
   background-size: cover;
   background-position: center;
   display: inline-block;
