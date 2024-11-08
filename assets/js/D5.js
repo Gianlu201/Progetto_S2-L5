@@ -10,19 +10,70 @@ REGOLE
 /* ESERCIZIO 1
     Dato il seguente array, scrivi del codice per stampare ogni elemento dell'array in console.
 */
-const pets = ['dog', 'cat', 'hamster', 'redfish']
+const pets = ['dog', 'cat', 'hamster', 'redfish'];
+
+console.log('ESERCIZIO 1');
+
+function showArray(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+  }
+}
+
+showArray(pets);
+
+console.log('____________________');
 
 /* ESERCIZIO 2
     Scrivi del codice per ordinare alfabeticamente gli elementi dell'array "pets".
 */
+console.log('ESERCIZIO 2');
+
+const newPets = pets.sort();
+console.log(newPets);
+
+console.log('____________________');
 
 /* ESERCIZIO 3
     Scrivi del codice per stampare nuovamente in console gli elementi dell'array "pets", questa volta in ordine invertito.
 */
+console.log('ESERCIZIO 3');
+
+function showReverseArray(arr) {
+  arr = arr.reverse();
+  showArray(arr);
+  return;
+}
+
+console.log('Reverse of pets (Z to A)');
+showReverseArray(newPets);
+
+console.log('____________________');
 
 /* ESERCIZIO 4
     Scrivi del codice per spostare il primo elemento dall'array "pets" in ultima posizione.
 */
+console.log('ESERCIZIO 4');
+
+// const modPets = [];
+
+function fromStartToEnd(arr) {
+  const myArray = [];
+  for (let i = 0; i < arr.length - 1; i++) {
+    myArray[i] = arr[i + 1];
+  }
+  myArray.push(arr[0]);
+
+  return myArray;
+}
+
+console.log('Before:');
+console.log(pets);
+
+console.log('After:');
+console.log(fromStartToEnd(pets));
+
+console.log('____________________');
 
 /* ESERCIZIO 5
     Dato il seguente array di oggetti, scrivi del codice per aggiungere ad ognuno di essi una proprietà "licensePlate" con valore a tua scelta.
@@ -46,7 +97,7 @@ const cars = [
     color: 'black',
     trims: ['life', 'style', 'r-line'],
   },
-]
+];
 
 /* ESERCIZIO 6
     Scrivi del codice per aggiungere un nuovo oggetto in ultima posizione nell'array "cars", rispettando la struttura degli altri elementi.
@@ -56,7 +107,7 @@ const cars = [
 /* ESERCIZIO 7
     Scrivi del codice per salvare il primo elemento della proprietà "trims" di ogni auto nel nuovo array "justTrims", sotto definito.
 */
-const justTrims = []
+const justTrims = [];
 
 /* ESERCIZIO 8
     Cicla l'array "cars" e costruisci un if/else statament per mostrare due diversi messaggi in console. Se la prima lettera della proprietà
@@ -68,11 +119,11 @@ const justTrims = []
 */
 const numericArray = [
   6, 90, 45, 75, 84, 98, 35, 74, 31, 2, 8, 23, 100, 32, 66, 313, 321, 105,
-]
+];
 
 /* ESERCIZIO 10
     Partendo dall'array fornito e utilizzando un costrutto switch, genera un nuovo array composto dalle posizioni di ogni carattere all'interno
     dell'alfabeto italiano.
     es. [f, b, e] --> [6, 2, 5]
 */
-const charactersArray = ['g', 'n', 'u', 'z', 'd']
+const charactersArray = ['g', 'n', 'u', 'z', 'd'];
